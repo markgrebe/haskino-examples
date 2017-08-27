@@ -63,3 +63,4 @@ lcdExample = withArduino True "/dev/cu.usbmodem1421" theProgram
 
 main :: IO ()
 main = compileProgram theProgram "helloLawrence.ino"
+-- main = lcdExample

@@ -50,10 +50,6 @@ ledExample :: IO ()
 ledExample = withArduino True "/dev/cu.usbmodem1421" $ do
     initExample
 
--- Execute this function to generate C code to be used with the runtime.
-compile :: IO ()
-compile = compileProgram initExample "multiLED.ino"
-
 main :: IO ()
 main = compileProgram initExample "multiLED.ino"
-
+-- main = ledExample

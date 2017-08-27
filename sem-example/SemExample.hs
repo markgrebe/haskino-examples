@@ -77,4 +77,4 @@ semExample = withArduino True "/dev/cu.usbmodem1421" $ do
 
 main :: IO ()
 main = compileProgram initExample "semExample.ino"
-
+-- main = semExample

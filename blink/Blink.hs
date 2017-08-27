@@ -25,18 +25,16 @@ delay = 1000
 blink :: Arduino ()
 blink = do
     setPinMode led OUTPUT
-    blinkLoop
-  where
-    blinkLoop :: Arduino ()
-    blinkLoop = do
+    loop $ do
         digitalWrite led True
         delayMillis delay
         digitalWrite led False
         delayMillis delay
-        blinkLoop
 
 blinkExample :: IO ()
 blinkExample = withArduino True "/dev/cu.usbmodem1421" blink
 
 main :: IO ()
 main = compileProgram blink "blink.ino"
+-- main = blinkExample
+

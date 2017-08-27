@@ -32,8 +32,8 @@ Executable haskino-semexample
     Hs-Source-Dirs: .
     default-language:    Haskell2010
     if flag(deep)
-      Ghc-Options: -Wall -fplugin=System.Hardware.Haskino.ShallowDeepPlugin
+      Ghc-Options: -Wall -threaded -fplugin=System.Hardware.Haskino.ShallowDeepPlugin
     else
-      Ghc-Options: -Wall
+      Ghc-Options: -Wall -threaded
 
 
