@@ -1,4 +1,3 @@
-{-# LANGUAGE CPP #-}
 -------------------------------------------------------------------------------
 -- |
 -- Module      :  System.Hardware.Haskino.SamplePrograms.Rewrite.MultiLED
@@ -56,9 +55,5 @@ compile :: IO ()
 compile = compileProgram initExample "multiLED.ino"
 
 main :: IO ()
-#ifdef DEEP
 main = compileProgram initExample "multiLED.ino"
-#else
-main = ledExample
-#endif
 

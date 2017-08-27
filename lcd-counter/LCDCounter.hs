@@ -1,4 +1,3 @@
-{-# LANGUAGE CPP #-}
 -----------------------------------------------------------------------------
 -- |
 -- Module      :  System.Hardware.Haskino.SamplePrograms.Rewrite.LCDCounter
@@ -110,8 +109,4 @@ lcdCounter = withArduino True "/dev/cu.usbmodem1421" $ do
     counterProg
 
 main :: IO ()
-#ifdef DEEP
 main = compileProgram counterProg "lcdCounter.ino"
-#else
-main = lcdCounter
-#endif

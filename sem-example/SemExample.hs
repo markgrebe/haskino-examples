@@ -1,4 +1,3 @@
-{-# LANGUAGE CPP #-}
 -------------------------------------------------------------------------------
 -- |
 -- Module      :  System.Hardware.Haskino.SamplePrograms.Rewrite.semExample
@@ -77,9 +76,5 @@ semExample = withArduino True "/dev/cu.usbmodem1421" $ do
     initExample
 
 main :: IO ()
-#ifdef DEEP
 main = compileProgram initExample "semExample.ino"
-#else
-main = semExample
-#endif
 

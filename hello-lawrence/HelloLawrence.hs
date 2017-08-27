@@ -1,4 +1,3 @@
-{-# LANGUAGE CPP #-}
 -------------------------------------------------------------------------------
 -- |
 -- Module      :  System.Hardware.Haskino.SamplePrograms.Deep.ScheduledLCDE
@@ -63,8 +62,4 @@ lcdExample :: IO ()
 lcdExample = withArduino True "/dev/cu.usbmodem1421" theProgram
 
 main :: IO ()
-#ifdef DEEP
 main = compileProgram theProgram "helloLawrence.ino"
-#else
-main = lcdExample
-#endif

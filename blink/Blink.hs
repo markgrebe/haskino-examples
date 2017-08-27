@@ -1,4 +1,3 @@
-{-# LANGUAGE CPP #-}
 -------------------------------------------------------------------------------
 -- |
 -- Module      :  System.Hardware.Haskino.SamplePrograms.Rewrite.Blink
@@ -40,8 +39,4 @@ blinkExample :: IO ()
 blinkExample = withArduino True "/dev/cu.usbmodem1421" blink
 
 main :: IO ()
-#ifdef DEEP
 main = compileProgram blink "blink.ino"
-#else
-main = blinkExample
-#endif
