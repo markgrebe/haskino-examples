@@ -60,7 +60,7 @@ helloLawrence lcd = do
 
 -- Execute this function to run program with firmware interpreter
 lcdExample :: IO ()
-lcdExample = withArduino False "/dev/cu.usbmodem1421" theProgram
+lcdExample = withArduino True "/dev/cu.usbmodem1421" theProgram
 
 main :: IO ()
 #ifdef DEEP

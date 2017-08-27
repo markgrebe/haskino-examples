@@ -37,7 +37,7 @@ blink = do
         blinkLoop
 
 blinkExample :: IO ()
-blinkExample = withArduino False "/dev/cu.usbmodem1421" blink
+blinkExample = withArduino True "/dev/cu.usbmodem1421" blink
 
 main :: IO ()
 #ifdef DEEP
